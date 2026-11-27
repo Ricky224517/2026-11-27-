@@ -36,7 +36,7 @@ def make_report(cups):
             lines.append(f"{team}：疊{h}層，剩{total - cups_needed(h)}個")
     return lines
 
-# 5 D1515375_鍾允碩_report.py
+# 5 D1515375_鍾允碩_main.py 
 
 def main():
     teams = input().split()
