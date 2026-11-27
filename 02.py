@@ -1,18 +1,18 @@
-# 1. D1587739_蔡融頫
+# 1. D1587739_蔡融頫_digits.py 
 
 def digit_sum(n):
     if n < 10:
         return n
     return (n % 10) + digit_sum(n // 10)
 
-# 2. D1546938_魏劭宇
+# 2. D1546938_魏劭宇_lifenum.py 
 
 def life_number(n):
     if n < 10:
         return n
     return life_number(digit_sum(n))
 
-# 3. D1546822_連奕然
+# 3. D1546822_連奕然_people.py
 
 def build_numbers(names, birthdays):
     result = {}
@@ -20,7 +20,7 @@ def build_numbers(names, birthdays):
         result[names[i]] = life_number(birthdays[i])
     return result
 
-# 4. D1546985_林璿祺
+# 4. D1546985_林璿祺_tally.py 
 
 def count_numbers(numbers):
     counts = {}
@@ -33,7 +33,7 @@ def count_numbers(numbers):
             counts[target] = total
     return counts
 
-# 5. D1515375_鍾允碩
+# 5. D1515375_鍾允碩_main.py 
 
 def main():
     n = int(input())

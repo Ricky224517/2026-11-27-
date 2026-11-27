@@ -1,30 +1,29 @@
-# 1 D1587739_蔡融頫
+# 1 D1587739_蔡融頫_cups.py 
 
 def build_cups(teams, givers, counts):
     cups = {}
     for team in teams:
         cups[team] = 0
-    for i in range(len(givers)):
-        giver = givers[i]
+    for giver, count in zip(givers, counts):
         if giver in cups:
-            cups[giver] += counts[i]
+            cups[giver] += count
     return cups
 
-# 2 D1546938_魏劭宇
+# 2 D1546938_魏劭宇_pyramid.py
 
 def cups_needed(h):
     if h <= 0:
         return 0
     return h + cups_needed(h - 1)
 
-# 3 D1546822_連奕然
+# 3 D1546822_連奕然_height.py
 
 def max_height(cups, h):
     if cups_needed(h) > cups:
         return h - 1
     return max_height(cups, h + 1)
 
-# 4 D1546985_林璿祺
+# 4 D1546985_林璿祺_report.py
 
 def make_report(cups):
     lines = []
@@ -38,7 +37,7 @@ def make_report(cups):
             lines.append(f"{team}：疊{h}層，剩{r}個")
     return lines
 
-# 5 D1515375_鍾允碩
+# 5 D1515375_鍾允碩_report.py
 
 def main():
     teams = input().split()
