@@ -4,9 +4,10 @@ def build_cups(teams, givers, counts):
     cups = {}
     for team in teams:
         cups[team] = 0
-    for giver, count in zip(givers, counts):
+    for i in range(len(givers)):
+        giver = givers[i]
         if giver in cups:
-            cups[giver] += count
+            cups[giver] += counts[i]
     return cups
 
 # 2 D1546938_魏劭宇_pyramid.py
