@@ -25,16 +25,15 @@ def max_height(cups, h):
 
 # 4 D1546985_林璿祺_report.py
 
+
 def make_report(cups):
     lines = []
-    for team in cups:
-        total = cups[team]
+    for team, total in cups.items():
         h = max_height(total, 1)
         if h == 0:
             lines.append(f"{team}：杯子不夠疊一層")
         else:
-            r = total - cups_needed(h)
-            lines.append(f"{team}：疊{h}層，剩{r}個")
+            lines.append(f"{team}：疊{h}層，剩{total - cups_needed(h)}個")
     return lines
 
 # 5 D1515375_鍾允碩_report.py
